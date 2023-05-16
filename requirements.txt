@@ -1,0 +1,6 @@
+requests
+pytest
+mmpy-bot
+redis
+python-dotenv
+pytest-mock

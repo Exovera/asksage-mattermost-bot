@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+
+  mattermost:
+    image: mattermost/mattermost-preview
+    ports:
+      - "8065:8065"
+    networks:
+      - sage
+
+  bot:
+    build: .
+    image: sage:latest
+    volumes:
+      - ./:/app
+    restart: always
+    environment:
+      MATTERMOST_BOT_TOKEN: ${MATTERMOST_BOT_TOKEN}
+      MATTERMOST_TEAM: ${MATTERMOST_TEAM}
+      MATTERMOST_URL: ${MATTERMOST_URL}
+      REDIS_URL: ${REDIS_URL}
+      SAGE_EMAIL_ACCOUNT: ${SAGE_EMAIL_ACCOUNT}
+      SAGE_API_PASSWORD: ${SAGE_API_PASSWORD}
+      SAGE_API_GET_TOKEN_URL: ${SAGE_API_GET_TOKEN_URL}
+      SAGE_API_QUERY_URL: ${SAGE_API_QUERY_URL}
+    command: ["python3", "src/mattermost_bot/bot.py"]
+    networks:
+      - sage
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    networks:
+      - sage
+
+networks:
+  sage:
