@@ -54,7 +54,7 @@ Keep this token secure and do not share it with unauthorized individuals. You'll
 With these steps completed, your local Mattermost instance is ready for use with the AskSage bot.
 
 ## AskSage
-To use the AskSage Mattermost Bot, you'll need an AskSage account. If you don't have one, please sign up for an account on the [AskSage website](https://www.asksage.ai).
+To use the AskSage Mattermost Bot, you'll need an AskSage account. If you don't have one, please sign up for an account on the [AskSage website](https://www.asksage.ai). You will need a paid AskSage account to be able to use this service. You can [sign up](https://chat.asksage.ai/register) for an account here. Please note that AskSage is not available in all countries. 
 
 Once you have an account, you'll receive a username and password. These will serve as the credentials for the bot, allowing it to interact with the AskSage AI and provide responses to your queries. Please remember to keep these credentials secure and do not share them with unauthorized individuals.
 
